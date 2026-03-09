@@ -5,8 +5,8 @@ pandas~=3.0
 scons~=4.10
 scipy~=1.17
 seaborn~=0.13
-geographiclib
-numpy
-pyproj
-scikit-learn
-shapely
+geographiclib~=2.1
+numpy~=2.4
+pyproj~=3.7
+scikit-learn~=1.8
+shapely~=2.1
