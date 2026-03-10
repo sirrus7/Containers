@@ -1,14 +1,14 @@
 # Ubuntu Docker Images
 
-This directory contains Dockerfiles for building and running the DTK (Disease Transmission Kernel) on Ubuntu 22.04.
+This directory contains Dockerfiles for building and running EMOD on Ubuntu 22.04.
 
 ## Image Overview
 
 | File | Base OS | Purpose |
 |---|---|---|
-| `Dockerfile.buildenv.ubuntu` | Ubuntu 22.04 | Compile DTK |
-| `Dockerfile.sfts.ubuntu` | Ubuntu 22.04 | Run Science Feature Tests |
-| `Dockerfile.runtime.ubuntu` | Ubuntu 22.04 | Run DTK simulations |
+| `Dockerfile.buildenv.ubuntu` | Ubuntu 22.04 | Compile EMOD |
+| `Dockerfile.sfts.ubuntu` | Ubuntu 22.04 | Run Regression and Run Science Feature Tests |
+| `Dockerfile.runtime.ubuntu` | Ubuntu 22.04 | Run EMOD simulations |
 
 These images are built and pushed to GHCR via the `build_docker_images.yml` pipeline as `emod-ubuntu-buildenv`, `emod-ubuntu-testenv`, and `emod-ubuntu-runtime`.
 
@@ -16,7 +16,7 @@ These images are built and pushed to GHCR via the `build_docker_images.yml` pipe
 
 ## `Dockerfile.buildenv.ubuntu`
 
-Python 3.13 (via `deadsnakes` PPA), SCons (via pip), and the system packages needed to compile DTK with GCC 11 and MPICH.
+Python 3.13 (via `deadsnakes` PPA), SCons (via pip), and the system packages needed to compile EMOD with GCC 11 and MPICH.
 
 ### System Packages
 
@@ -64,7 +64,7 @@ pip packages are installed in four separate layers for better error isolation an
 
 ## `Dockerfile.runtime.ubuntu`
 
-Minimal Ubuntu 22.04 image for running DTK simulations (without build tooling).
+Minimal Ubuntu 22.04 image for running EMOD simulations (without build tooling).
 
 ### System Packages
 
