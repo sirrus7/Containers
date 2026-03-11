@@ -7,7 +7,7 @@ This directory contains Dockerfiles for building and running EMOD on Ubuntu 22.0
 | File | Base OS | Purpose |
 |---|---|---|
 | `Dockerfile.buildenv.ubuntu` | Ubuntu 22.04 | Compile EMOD |
-| `Dockerfile.sfts.ubuntu` | Ubuntu 22.04 | Run Regression and Run Science Feature Tests |
+| `Dockerfile.testenv.ubuntu` | Ubuntu 22.04 | Run Regression and Run Science Feature Tests |
 | `Dockerfile.runtime.ubuntu` | Ubuntu 22.04 | Run EMOD simulations |
 
 These images are built and pushed to GHCR via the `build_docker_images.yml` pipeline as `emod-ubuntu-buildenv`, `emod-ubuntu-testenv`, and `emod-ubuntu-runtime`.
